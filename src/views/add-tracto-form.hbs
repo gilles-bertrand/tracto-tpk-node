@@ -1,0 +1,107 @@
+<div class="mx-auto w-2/3 pt-6">
+    <h1 class="text-3xl text-strong">Formulaire d'ajout de tracto</h1>
+    <form class="pt-8" action="/create-tracto" method="post">
+        <div class="pt-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input type="text" name="name" id="name"
+                    class="block w-full pr-10 border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md"
+                    placeholder="tracto name" value="" aria-invalid="true" aria-describedby="name-error">
+                <div class="absolute inset-y-0 hidden right-0 pr-3 flex items-center pointer-events-none">
+                    <!-- Heroicon name: solid/exclamation-circle -->
+                    <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+            <p class="hidden mt-2 text-sm text-red-600" id="name-error">Your must fill this field</p>
+        </div>
+        <div class="pt-4">
+            <label for="image" class="block text-sm font-medium text-gray-700">image</label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input type="text" name="image" id="image"
+                    class="block w-full pr-10 border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md"
+                    placeholder="tracto image" value="" aria-invalid="true" aria-describedby="image-error">
+                <div class="absolute inset-y-0 hidden right-0 pr-3 flex items-center pointer-events-none">
+                    <!-- Heroicon name: solid/exclamation-circle -->
+                    <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+            <p class="hidden mt-2 text-sm text-red-600" id="name-error">Your must fill this field</p>
+        </div>
+        <div class="pt-4">
+            <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input type="number" name="price" id="price"
+                    class="block w-full pr-10 border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md"
+                    placeholder="tracto price" value="" aria-invalid="true" aria-describedby="price-error">
+                <div class="absolute inset-y-0 hidden right-0 pr-3 flex items-center pointer-events-none">
+                    <!-- Heroicon name: solid/exclamation-circle -->
+                    <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+            <p class="hidden mt-2 text-sm text-red-600" id="name-error">Your must fill this field</p>
+        </div>
+        <div class="pt-4">
+            <label for="stock" class="block text-sm font-medium text-gray-700">In stock</label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input type="number" name="stock" id="stock"
+                    class="block w-full pr-10 border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md"
+                    placeholder="tracto stock" value="" aria-invalid="true" aria-describedby="stock-error">
+                <div class="absolute inset-y-0 hidden right-0 pr-3 flex items-center pointer-events-none">
+                    <!-- Heroicon name: solid/exclamation-circle -->
+                    <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+            <p class="hidden mt-2 text-sm text-red-600" id="name-error">Your must fill this field</p>
+        </div>
+        <div class="pt-4">
+            <label for="rating" class="block text-sm font-medium text-gray-700">Rating</label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+                <input type="number" name="rating" id="rating" min="0" max="10"
+                    class="block w-full pr-10 border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md"
+                    placeholder="tracto rating" value="" aria-invalid="true" aria-describedby="rating-error">
+                <div class="absolute inset-y-0 hidden right-0 pr-3 flex items-center pointer-events-none">
+                    <!-- Heroicon name: solid/exclamation-circle -->
+                    <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+            <p class="hidden mt-2 text-sm text-red-600" id="name-error">Your must fill this field</p>
+        </div>
+        <div class="pt-4">
+            <button type="submit"
+                class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+                <span class="pr-4">Save tracto</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+
+            </button>
+        </div>
+    </form>
+</div>

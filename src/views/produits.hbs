@@ -1,0 +1,43 @@
+<div class="bg-white">
+    <div class="py-16 sm:py-24 lg:max-w-7xl lg:mx-auto lg:px-8">
+        <div class="px-4 flex items-center justify-between sm:px-6 lg:px-0">
+            <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Nos super tractos</h2>
+        </div>
+
+        <div class="mt-8 relative">
+            <div class="relative w-full pb-6 -mb-6 overflow-x-auto">
+                <ul role="list"
+                    class="mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:space-x-0 lg:grid lg:grid-cols-4 lg:gap-x-8">
+                    {{#each data.tractos}}
+                    <li class="w-64 py-4 inline-flex flex-col text-center lg:w-auto">
+                        <div class="group relative">
+                            <div class="w-full bg-gray-200 rounded-md overflow-hidden aspect-w-1 aspect-h-1">
+                                <img src="{{this.image}}" alt="{{this.name}}"
+                                    class="w-full h-full object-center object-cover group-hover:opacity-75">
+                            </div>
+                            <div class="mt-6">
+                                <h3 class="mt-1 font-semibold text-gray-900">
+                                    <a href="/produits/{{this._id}}">
+                                        <span class="absolute inset-0"></span>
+                                        {{this.name}}
+                                    </a>
+                                </h3>
+                                {{!-- <p class="text-sm text-gray-500">Stock : {{this.stock}}</p> --}}
+                                <p class="mt-1 text-2xl  text-gray-900">$ {{this.price}}</p>
+                            </div>
+                        </div>
+
+                        <form action="/delete-tracto/{{this._id}}" method="get"><input type="submit" value="delete">
+                        </form>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 flex px-4 sm:hidden">
+            <a href="#" class="text-sm font-semibold text-indigo-600 hover:text-indigo-500">See everything<span
+                    aria-hidden="true"> &rarr;</span></a>
+        </div>
+    </div>
+</div>

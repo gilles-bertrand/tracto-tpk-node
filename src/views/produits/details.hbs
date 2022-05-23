@@ -1,0 +1,63 @@
+<div class="bg-white">
+    <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
+        <!-- Product details -->
+        <div class="lg:max-w-lg lg:self-end">
+            <div class="mt-4">
+                <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{{data.tracto.name}}</h1>
+            </div>
+            <div class="mt-6 flex items-center">
+                <!-- Heroicon name: solid/check -->
+                <svg class="flex-shrink-0 w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                </svg>
+                <p class="ml-2 text-sm text-gray-500"><span class="text-2xl black">{{data.tracto.stock}}</span> in stock
+                    and
+                    ready to ship</p>
+            </div>
+            <div class="mt-4">
+                <h4 class="sr-only">Rating</h4>
+
+                <ul role="list" class="mt-auto pt-6 flex items-left justify-left space-x-3">
+                    {{{setRatingsHtml data.tracto.rating}}}
+                </ul>
+            </div>
+            </section>
+        </div>
+
+        <!-- Product image -->
+        <div class="mt-10 lg:mt-0 lg:col-start-2 lg:row-span-2 lg:self-center">
+            <div class="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
+                <img src="{{data.tracto.image}}"
+                    alt="Model wearing light green backpack with black canvas straps and front zipper pouch."
+                    class="w-full h-full object-center object-cover">
+            </div>
+        </div>
+
+        <!-- Product form -->
+        <div class="mt-10 lg:max-w-lg lg:col-start-1 lg:row-start-2 lg:self-start">
+            <section aria-labelledby="options-heading">
+                <h2 id="options-heading" class="sr-only">Product options</h2>
+
+                <form class="flex" action="/add-order" method="post">
+
+                    <div class="mt-10 px-8">
+
+                        <select id="quantity" name="quantity"
+                            class="mt-1 block w-full font-medium pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                            {{{getQuantityOptions data.tracto.stock}}}
+                        </select>
+                    </div>
+
+                    <input id="id" name="id" type="hidden" value="{{data.tracto._id}}" />
+                    <div class="mt-10">
+                        <button type="submit"
+                            class="w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Order</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
